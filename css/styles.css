@@ -6,11 +6,11 @@
    ============================================================ */
 
 @font-face {
-  font-family: "Space Grotesk";
+  font-family: "Poppins";
   font-style: normal;
-  font-weight: 300 700;
+  font-weight: 700;
   font-display: swap;
-  src: url("../assets/fonts/space-grotesk-latin.woff2") format("woff2");
+  src: url("../assets/fonts/poppins-700-latin.woff2") format("woff2");
 }
 @font-face {
   font-family: "Poppins";
@@ -39,7 +39,7 @@
   --muted: rgba(26, 32, 44, 0.7);
   --hairline: rgba(26, 32, 44, 0.14);
   --hairline-light: rgba(255, 255, 255, 0.18);
-  --display: "Space Grotesk", "Helvetica Neue", sans-serif;
+  --display: "Poppins", -apple-system, "Segoe UI", sans-serif;
   --body: "Poppins", -apple-system, "Segoe UI", sans-serif;
   --radius: 14px;
   --pad-x: clamp(20px, 4vw, 56px);
@@ -242,7 +242,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 
 .mobile-menu a:not(.btn) {
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   padding: 16px 0;
   border-bottom: 1px solid var(--hairline);
@@ -262,7 +262,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   justify-content: center;
   gap: 10px;
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   padding: 14px 30px;
@@ -638,7 +638,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 .best-tag {
   font-style: normal;
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -650,7 +650,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
 
 .price-claim {
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.25rem, 2.4vw, 1.7rem);
   letter-spacing: -0.01em;
   text-align: center;
@@ -982,7 +982,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   color: var(--white);
   text-align: center;
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
   font-size: 0.9rem;
   border-radius: 999px;
@@ -1136,7 +1136,7 @@ body.menu-open .nav-toggle span:nth-child(3) {
   gap: 20px;
   padding: 24px 4px;
   font-family: var(--display);
-  font-weight: 500;
+  font-weight: 600;
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   letter-spacing: -0.01em;
 }
