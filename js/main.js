@@ -7,7 +7,7 @@
   initLang();
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion || typeof gsap === "undefined") {
+  if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     document.body.classList.add("no-motion");
     return;
   }

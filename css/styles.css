@@ -29,13 +29,14 @@
 
 :root {
   --orange: #fe6601;
+  --orange-deep: #d15400;
   --amber: #ec9136;
   --cream: #faf7f4;
   --peach: #fcddc9;
   --gold: #ffc449;
   --ink: #1a202c;
   --white: #ffffff;
-  --muted: rgba(26, 32, 44, 0.6);
+  --muted: rgba(26, 32, 44, 0.7);
   --hairline: rgba(26, 32, 44, 0.14);
   --hairline-light: rgba(255, 255, 255, 0.18);
   --display: "Space Grotesk", "Helvetica Neue", sans-serif;
@@ -152,12 +153,12 @@ a {
 }
 
 .btn-solid {
-  background: var(--orange);
+  background: var(--orange-deep);
   color: var(--white);
 }
 
 .btn-solid:hover {
-  background: #e25a00;
+  background: #b84a00;
 }
 
 .btn-ghost {
@@ -305,7 +306,7 @@ a {
   font-family: var(--display);
   font-weight: 700;
   font-size: 0.85rem;
-  color: var(--orange);
+  color: var(--orange-deep);
 }
 
 .kicker-label {
@@ -491,7 +492,7 @@ a {
 }
 
 .price-best [role="cell"] {
-  color: var(--orange);
+  color: var(--orange-deep);
 }
 
 .best-tag {
@@ -501,8 +502,8 @@ a {
   font-size: 0.68rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--orange);
-  border: 1px solid rgba(254, 102, 1, 0.45);
+  color: var(--orange-deep);
+  border: 1px solid rgba(209, 84, 0, 0.5);
   border-radius: 999px;
   padding: 4px 10px;
 }
@@ -719,7 +720,7 @@ a {
 .app-brand {
   font-family: var(--display);
   font-weight: 700;
-  color: var(--orange);
+  color: var(--orange-deep);
   font-size: 1rem;
   letter-spacing: 0.01em;
 }
@@ -776,7 +777,7 @@ a {
 .app-item em {
   font-style: normal;
   font-size: 0.75rem;
-  color: var(--orange);
+  color: var(--orange-deep);
   font-weight: 600;
 }
 
@@ -837,11 +838,11 @@ a {
 
 .app-steps li.is-now {
   opacity: 1;
-  color: var(--orange);
+  color: var(--orange-deep);
 }
 
 .app-cta {
-  background: var(--orange);
+  background: var(--orange-deep);
   color: var(--white);
   text-align: center;
   font-family: var(--display);
@@ -875,7 +876,7 @@ a {
   font-family: var(--display);
   font-weight: 700;
   font-size: 0.85rem;
-  color: var(--orange);
+  color: var(--orange-deep);
   flex: none;
 }
 
@@ -1024,7 +1025,7 @@ a {
   margin-top: 60px;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ---------- responsive ---------- */
