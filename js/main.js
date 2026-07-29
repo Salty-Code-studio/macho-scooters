@@ -45,6 +45,10 @@
 
   /* --- motion (skipped for reduced-motion or if GSAP failed to load) --- */
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    var hv = document.querySelector(".hero-video");
+    if (hv) { hv.removeAttribute("autoplay"); hv.pause(); }
+  }
   if (reduceMotion || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
     document.body.classList.add("no-motion");
     return;
@@ -54,7 +58,7 @@
 
   /* --- hero entrance: slow photo settle + headline rise --- */
   gsap.timeline({ defaults: { ease: "power2.out" } })
-    .from(".hero-media img", { scale: 1.07, duration: 1.6, ease: "power2.inOut" }, 0)
+    .from(".hero-media video, .hero-media img", { scale: 1.07, duration: 1.6, ease: "power2.inOut" }, 0)
     .from(".hero-line", { opacity: 0, y: 34, duration: 0.9, stagger: 0.1 }, 0.25)
     .from(".hero-rule", { scaleX: 0, transformOrigin: "left center", duration: 0.6 }, 0.75)
     .from(".hero-sub, .hero-ctas", { opacity: 0, y: 20, duration: 0.7, stagger: 0.1 }, 0.85);
