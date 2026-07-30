@@ -10,9 +10,16 @@
       "nav.contact": "Contact",
       "nav.boek": "Boek nu",
 
+      "hero.eyebrow": "Kralendijk · Bonaire",
       "hero.t1": "Het eiland",
       "hero.t2": "is van jou.",
       "hero.sub": "Scooters & auto’s huren op Bonaire. Vanaf $21,50 per dag, helm en verzekering inbegrepen.",
+      "stats.title": "Een begrip op Bonaire.",
+      "stats.l1": "Google-score",
+      "stats.l2": "Reviews",
+      "stats.l3": "Locaties",
+      "stats.foot": "Sinds jaar en dag jouw scooter en auto op het eiland.",
+      "cta.eyebrow": "Enjoy the ride",
       "hero.cta1": "Boek nu",
       "hero.cta2": "App ons",
 
@@ -157,9 +164,16 @@
       "nav.contact": "Contact",
       "nav.boek": "Book now",
 
+      "hero.eyebrow": "Kralendijk · Bonaire",
       "hero.t1": "The island",
       "hero.t2": "is all yours.",
       "hero.sub": "Scooter & car rental on Bonaire. From $21.50 a day, helmet and insurance included.",
+      "stats.title": "A household name on Bonaire.",
+      "stats.l1": "Google rating",
+      "stats.l2": "Reviews",
+      "stats.l3": "Locations",
+      "stats.foot": "Your scooter and car on the island, year in, year out.",
+      "cta.eyebrow": "Enjoy the ride",
       "hero.cta1": "Book now",
       "hero.cta2": "WhatsApp us",
 

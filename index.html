@@ -70,9 +70,10 @@
         </video>
       </figure>
       <div class="hero-content">
+        <p class="hero-eyebrow"><span class="hero-dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">Kralendijk · Bonaire</span></p>
         <h1 class="hero-title">
-          <span class="hero-line" data-i18n="hero.t1">Het eiland</span>
-          <span class="hero-line" data-i18n="hero.t2">is van jou.</span>
+          <span class="hero-line"><span class="hl-i" data-i18n="hero.t1">Het eiland</span></span>
+          <span class="hero-line"><span class="hl-i" data-i18n="hero.t2">is van jou.</span></span>
         </h1>
         <span class="hero-rule" aria-hidden="true"></span>
         <p class="hero-sub" data-i18n="hero.sub">Scooters &amp; auto’s huren op Bonaire. Vanaf $21,50 per dag, helm en verzekering inbegrepen.</p>
@@ -81,7 +82,18 @@
           <a class="btn btn-ghost" href="https://wa.me/5997011233" target="_blank" rel="noopener" data-i18n="hero.cta2">App ons</a>
         </div>
       </div>
+      <div class="scroll-cue" aria-hidden="true"><span></span></div>
     </section>
+
+    <!-- BRAND TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-seg"><i data-i18n="marquee.a">ENJOY THE RIDE</i><b>✳</b><i data-i18n="marquee.b">KIES VERSTANDIG, KIES MACHO!</i><b>✳</b></span>
+        <span class="ticker-seg"><i data-i18n="marquee.a">ENJOY THE RIDE</i><b>✳</b><i data-i18n="marquee.b">KIES VERSTANDIG, KIES MACHO!</i><b>✳</b></span>
+        <span class="ticker-seg"><i data-i18n="marquee.a">ENJOY THE RIDE</i><b>✳</b><i data-i18n="marquee.b">KIES VERSTANDIG, KIES MACHO!</i><b>✳</b></span>
+        <span class="ticker-seg"><i data-i18n="marquee.a">ENJOY THE RIDE</i><b>✳</b><i data-i18n="marquee.b">KIES VERSTANDIG, KIES MACHO!</i><b>✳</b></span>
+      </div>
+    </div>
 
     <!-- 2. USP STRIP -->
     <div class="usp-strip">
@@ -211,6 +223,29 @@
             <p data-i18n="routes.r3.desc">1000 Steps, Seru Largu en Sorobon.</p>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- STATS BAND -->
+    <section class="stats" id="stats">
+      <span class="stats-mark" aria-hidden="true">MACHO!</span>
+      <div class="stats-inner">
+        <h2 class="stats-title" data-reveal data-i18n="stats.title">Een begrip op Bonaire.</h2>
+        <div class="stats-grid">
+          <div class="stat" data-reveal>
+            <span class="stat-num" data-count="4.4" data-dec="1">4,4</span>
+            <span class="stat-label" data-i18n="stats.l1">Google-score</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat-num" data-count="69">69</span>
+            <span class="stat-label" data-i18n="stats.l2">Reviews</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat-num" data-count="2">2</span>
+            <span class="stat-label" data-i18n="stats.l3">Locaties</span>
+          </div>
+        </div>
+        <p class="stats-foot" data-reveal data-i18n="stats.foot">Sinds jaar en dag jouw scooter en auto op het eiland.</p>
       </div>
     </section>
 
@@ -357,13 +392,16 @@
 
     <!-- 11. CTA BAND -->
     <section class="cta-band" id="ride">
-      <svg class="logo-svg cta-logo" aria-hidden="true"><use href="#macho-logo"/></svg>
-      <h2 class="cta-title" data-reveal data-i18n="cta.title">Klaar om te rijden?</h2>
-      <p class="cta-sub" data-i18n="cta.sub">Stuur een appje en je scooter staat klaar.</p>
-      <a class="btn btn-solid btn-lg" href="https://wa.me/5997011233" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.6-.7c.2-.2.2-.4.1-.6l-.8-2c-.2-.4-.4-.4-.6-.4h-.5Z"/></svg>
-        <span data-i18n="cta.wa">WhatsApp +5997011233</span>
-      </a>
+      <span class="cta-mark" aria-hidden="true">MACHO!</span>
+      <div class="cta-content">
+        <p class="cta-eyebrow" data-i18n="cta.eyebrow">Enjoy the ride</p>
+        <h2 class="cta-title" data-reveal data-i18n="cta.title">Klaar om te rijden?</h2>
+        <p class="cta-sub" data-i18n="cta.sub">Stuur een appje en je scooter staat klaar.</p>
+        <a class="btn btn-dark btn-lg" href="https://wa.me/5997011233" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8Zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.5-.3-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.6-.7c.2-.2.2-.4.1-.6l-.8-2c-.2-.4-.4-.4-.6-.4h-.5Z"/></svg>
+          <span data-i18n="cta.wa">WhatsApp +5997011233</span>
+        </a>
+      </div>
     </section>
   </main>
 
