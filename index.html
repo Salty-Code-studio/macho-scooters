@@ -150,29 +150,34 @@
         <p class="kicker"><span class="kicker-label" data-i18n="prijzen.kicker">Prijzen</span></p>
         <h2 class="section-title" data-reveal data-i18n="prijzen.title">Prijzen zonder gedoe.</h2>
       </div>
-      <div class="price-table" data-reveal role="table">
-        <div class="price-row price-head" role="row">
-          <span role="columnheader"></span>
-          <span role="columnheader" data-i18n="prijzen.single">Single</span>
-          <span role="columnheader" data-i18n="prijzen.double">Double</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="rowheader" data-i18n="prijzen.day">per dag</span>
-          <span role="cell" data-i18n="prijzen.s.day">$21,50</span>
-          <span role="cell" data-i18n="prijzen.d.day">$27,50</span>
-        </div>
-        <div class="price-row" role="row">
-          <span role="rowheader" data-i18n="prijzen.3days">3 dagen</span>
-          <span role="cell" data-i18n="prijzen.s.3days">$55</span>
-          <span role="cell" data-i18n="prijzen.d.3days">$75</span>
-        </div>
-        <div class="price-row price-best" role="row">
-          <span role="rowheader"><span data-i18n="prijzen.week">1 week</span><em class="best-tag" data-i18n="prijzen.best">Beste deal</em></span>
-          <span role="cell" data-i18n="prijzen.s.week">$110</span>
-          <span role="cell" data-i18n="prijzen.d.week">$150</span>
-        </div>
+      <div class="price-toggle" data-reveal role="group" aria-label="Type scooter">
+        <span class="pt-thumb" aria-hidden="true"></span>
+        <button class="pt-btn is-active" data-type="single" aria-pressed="true" type="button" data-i18n="prijzen.tSingle">1-persoons</button>
+        <button class="pt-btn" data-type="double" aria-pressed="false" type="button" data-i18n="prijzen.tDouble">2-persoons</button>
       </div>
-      <p class="price-claim" data-reveal data-i18n="prijzen.claim">Langer huren, minder betalen.</p>
+      <div class="price-cards" data-reveal aria-live="polite">
+        <article class="price-card" data-plan="1">
+          <p class="pc-dur" data-i18n="prijzen.card1">1 dag</p>
+          <p class="pc-total"><span class="pc-amount">$21,50</span></p>
+          <p class="pc-eff"><span class="pc-effnum">$21,50</span> <span data-i18n="prijzen.perday">per dag</span></p>
+          <p class="pc-save" data-empty></p>
+        </article>
+        <article class="price-card" data-plan="3">
+          <p class="pc-dur" data-i18n="prijzen.card3">3 dagen</p>
+          <p class="pc-total"><span class="pc-amount">$55</span></p>
+          <p class="pc-eff"><span class="pc-effnum">$18,33</span> <span data-i18n="prijzen.perday">per dag</span></p>
+          <p class="pc-save">–15%</p>
+        </article>
+        <article class="price-card is-best" data-plan="7">
+          <span class="pc-ribbon" data-i18n="prijzen.popular">Meest gekozen</span>
+          <p class="pc-dur" data-i18n="prijzen.card7">1 week</p>
+          <p class="pc-total"><span class="pc-amount">$110</span></p>
+          <p class="pc-eff"><span class="pc-effnum">$15,71</span> <span data-i18n="prijzen.perday">per dag</span></p>
+          <p class="pc-save pc-save-strong">–27%</p>
+          <a class="btn btn-solid pc-cta" href="#boeken" data-i18n="prijzen.cta">Boek deze deal</a>
+        </article>
+      </div>
+      <p class="price-claim" data-reveal data-i18n="prijzen.claim">Hoe langer je rijdt, hoe minder je per dag betaalt.</p>
       <p class="fine center" data-i18n="prijzen.incl">Alle prijzen inclusief verzekering, BTW, helm en slot.</p>
     </section>
 
@@ -182,19 +187,48 @@
         <div class="section-head">
           <p class="kicker"><span class="kicker-label" data-i18n="autos.kicker">Macho! Auto’s</span></p>
           <h2 class="section-title" data-reveal data-i18n="autos.title">Ook op vier wielen.</h2>
-          <p class="section-sub" data-i18n="autos.sub">Vanaf $85 per dag, all-risk verzekering inbegrepen.</p>
+          <p class="section-sub" data-i18n="autos.sub">Vanaf $85 per dag, all-risk verzekering inbegrepen. Gratis ophalen bij je hotel of het vliegveld.</p>
         </div>
-        <div class="autos-grid">
-          <figure class="autos-photo" data-reveal>
-            <img src="assets/img/autos.jpg" alt="Witte Macho! pick-up truck aan de ruige kust van Bonaire" loading="lazy" width="1400" height="1052">
-            <figcaption data-i18n="autos.photo.cap">Onze pick-ups kennen het eiland.</figcaption>
-          </figure>
-          <ul class="class-list">
-            <li class="class-row" data-reveal><h3 data-i18n="autos.c1.name">Compact</h3><p data-i18n="autos.c1.desc">Klein, handig, zuinig.</p></li>
-            <li class="class-row" data-reveal><h3 data-i18n="autos.c2.name">Sedan</h3><p data-i18n="autos.c2.desc">Comfort voor het hele gezin.</p></li>
-            <li class="class-row" data-reveal><h3 data-i18n="autos.c3.name">SUV</h3><p data-i18n="autos.c3.desc">Ruimte voor elk avontuur.</p></li>
-            <li class="class-row" data-reveal><h3 data-i18n="autos.c4.name">Premium</h3><p data-i18n="autos.c4.desc">Rijden in stijl.</p></li>
-          </ul>
+        <div class="cars-grid">
+          <article class="car-card" data-reveal>
+            <figure class="car-photo car-photo-contain"><img src="assets/img/car-compact.jpg" alt="Blauwe Kia Soul huurauto van Macho! Scooters &amp; Cars" loading="lazy" width="1000" height="563"></figure>
+            <div class="car-body">
+              <span class="car-class" data-i18n="autos.k1">Compact</span>
+              <div class="car-row">
+                <h3 data-i18n="autos.n1">4-deurs auto</h3>
+                <p class="car-price">$85 <span data-i18n="autos.day">/ dag</span></p>
+              </div>
+              <p class="car-spec" data-i18n="autos.s1">4 pers · 2 koffers · airco</p>
+              <p class="car-allrisk"><span class="car-check" aria-hidden="true"></span><span data-i18n="autos.allrisk">All-risk inbegrepen</span></p>
+              <a class="btn btn-outline-light car-cta" href="#boeken" data-i18n="autos.cta">Boek deze auto</a>
+            </div>
+          </article>
+          <article class="car-card car-card-feature" data-reveal>
+            <figure class="car-photo"><img src="assets/img/car-suv.jpg" alt="Zandkleurige Jeep Grand Cherokee huurauto aan de kust van Bonaire" loading="lazy" width="1200" height="675"></figure>
+            <div class="car-body">
+              <span class="car-class" data-i18n="autos.k2">SUV</span>
+              <div class="car-row">
+                <h3 data-i18n="autos.n2">4-deurs SUV</h3>
+                <p class="car-price">$110 <span data-i18n="autos.day">/ dag</span></p>
+              </div>
+              <p class="car-spec" data-i18n="autos.s2">5 pers · 3 koffers · stoer terrein</p>
+              <p class="car-allrisk"><span class="car-check" aria-hidden="true"></span><span data-i18n="autos.allrisk">All-risk inbegrepen</span></p>
+              <a class="btn btn-solid car-cta" href="#boeken" data-i18n="autos.cta">Boek deze auto</a>
+            </div>
+          </article>
+          <article class="car-card" data-reveal>
+            <figure class="car-photo"><img src="assets/img/autos.jpg" alt="Witte Macho! Double Cab pick-up truck aan de ruige kust van Bonaire" loading="lazy" width="1400" height="1052"></figure>
+            <div class="car-body">
+              <span class="car-class" data-i18n="autos.k3">Pickup</span>
+              <div class="car-row">
+                <h3 data-i18n="autos.n3">Double Cab Pickup</h3>
+                <p class="car-price">$85 <span data-i18n="autos.day">/ dag</span></p>
+              </div>
+              <p class="car-spec" data-i18n="autos.s3">4 pers · 3 koffers · open laadbak</p>
+              <p class="car-allrisk"><span class="car-check" aria-hidden="true"></span><span data-i18n="autos.allrisk">All-risk inbegrepen</span></p>
+              <a class="btn btn-outline-light car-cta" href="#boeken" data-i18n="autos.cta">Boek deze auto</a>
+            </div>
+          </article>
         </div>
         <p class="autos-note" data-i18n="autos.note">Ook te vinden tegenover het vliegveld, Kaya International 130.</p>
       </div>
@@ -202,25 +236,60 @@
 
     <!-- 6. ONTDEK BONAIRE -->
     <section class="section routes" id="routes">
-      <div class="section-head">
-        <p class="kicker"><span class="kicker-label" data-i18n="routes.kicker">Ontdek Bonaire</span></p>
-        <h2 class="section-title" data-reveal data-i18n="routes.title">Eén tank. Het hele eiland.</h2>
+      <div class="section-head routes-head">
+        <div>
+          <p class="kicker"><span class="kicker-label" data-i18n="routes.kicker">Ontdek Bonaire</span></p>
+          <h2 class="section-title" data-reveal data-i18n="routes.title">Eén tank. Het hele eiland.</h2>
+        </div>
+        <p class="routes-lead" data-reveal data-i18n="routes.lead">Bonaire is maar 39 km lang. Eén tank en je hebt het hele eiland gezien.</p>
       </div>
-      <div class="routes-grid">
-        <article class="route-card" data-reveal>
-          <figure><img src="assets/img/route-huts.jpg" alt="Huurders fotograferen elkaar bij de gele slavenhutten, met Macho! scooters geparkeerd ernaast" loading="lazy" width="1400" height="933"></figure>
-          <h3 data-i18n="routes.r1.name">Zuid</h3>
-          <p data-i18n="routes.r1.desc">Zoutpannen, slavenhutten en roze water.</p>
+
+      <div class="route-rows">
+        <article class="route-row" data-reveal>
+          <figure class="route-img">
+            <img src="assets/img/route-salt.jpg" alt="Huurders stoppen bij de zoutpannen van Bonaire met roze water en witte zoutbergen op de achtergrond" loading="lazy" width="1500" height="1000">
+            <span class="route-dist" data-i18n="routes.dist1">± 25 km</span>
+          </figure>
+          <div class="route-info">
+            <span class="route-tag" data-i18n="routes.r1.name">Zuid</span>
+            <h3 data-i18n="routes.r1.desc">Zoutpannen, slavenhutten en roze water.</h3>
+            <ul class="route-chips">
+              <li data-i18n="routes.c1a">Pekelmeer</li>
+              <li data-i18n="routes.c1b">Slavenhutten</li>
+              <li data-i18n="routes.c1c">Roze water</li>
+            </ul>
+          </div>
         </article>
-        <article class="route-card" data-reveal>
-          <figure><img src="assets/img/route-ride.jpg" alt="Huurder rijdt op een Macho! scooter over een lange rechte weg door de natuur van Bonaire" loading="lazy" width="1400" height="933"></figure>
-          <h3 data-i18n="routes.r2.name">Noord</h3>
-          <p data-i18n="routes.r2.desc">Rincon, Gotomeer en flamingo’s.</p>
+
+        <article class="route-row route-row-rev" data-reveal>
+          <figure class="route-img">
+            <img src="assets/img/route-flamingo.jpg" alt="Huurders kijken naar flamingo's aan de waterkant bij het Gotomeer op Bonaire" loading="lazy" width="1500" height="1000">
+            <span class="route-dist" data-i18n="routes.dist2">± 35 km</span>
+          </figure>
+          <div class="route-info">
+            <span class="route-tag" data-i18n="routes.r2.name">Noord</span>
+            <h3 data-i18n="routes.r2.desc">Rincon, Gotomeer en flamingo’s.</h3>
+            <ul class="route-chips">
+              <li data-i18n="routes.c2a">Gotomeer</li>
+              <li data-i18n="routes.c2b">Rincon</li>
+              <li data-i18n="routes.c2c">Flamingo’s</li>
+            </ul>
+          </div>
         </article>
-        <article class="route-card route-card-text" data-reveal>
-          <div class="route-text-inner">
-            <h3 data-i18n="routes.r3.name">Hoogtepunten</h3>
-            <p data-i18n="routes.r3.desc">1000 Steps, Seru Largu en Sorobon.</p>
+
+        <article class="route-row" data-reveal>
+          <figure class="route-img">
+            <img src="assets/img/route-road.jpg" alt="Twee Macho! scooters rijden met opgestoken armen over een open weg door de natuur van Bonaire" loading="lazy" width="1500" height="1000">
+            <span class="route-dist" data-i18n="routes.dist3">± 20 km</span>
+          </figure>
+          <div class="route-info">
+            <span class="route-tag" data-i18n="routes.r3.name">Hoogtepunten</span>
+            <h3 data-i18n="routes.r3.desc">1000 Steps, Seru Largu en Sorobon.</h3>
+            <ul class="route-chips">
+              <li data-i18n="routes.c3a">1000 Steps</li>
+              <li data-i18n="routes.c3b">Seru Largu</li>
+              <li data-i18n="routes.c3c">Sorobon</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -254,32 +323,14 @@
       <div class="boeken-panel">
         <div class="section-head">
           <p class="kicker"><span class="kicker-label" data-i18n="boeken.kicker">Boeken</span></p>
-          <h2 class="section-title" data-reveal data-i18n="boeken.title">In een paar tikken geregeld.</h2>
+          <h2 class="section-title" data-reveal data-i18n="boeken.title">Boek in 30 seconden.</h2>
         </div>
         <div class="boeken-grid">
-          <div class="phone" data-reveal aria-hidden="true">
+          <div class="phone" data-reveal>
             <div class="phone-screen">
-              <div class="app-top">
-                <span class="app-brand" data-i18n="phone.brand">MACHO!</span>
-                <span class="app-title" data-i18n="phone.title">Boek je rit</span>
+              <div class="quiz" id="quiz">
+                <a class="btn btn-solid" href="https://wa.me/5997011233" target="_blank" rel="noopener" data-i18n="boeken.cta">Start je boeking</a>
               </div>
-              <div class="app-chip"><span class="chip-dot"></span><span data-i18n="phone.avail">3 van 12 beschikbaar</span></div>
-              <div class="app-item">
-                <img src="assets/img/fleet-single.jpg" alt="" width="96" height="71">
-                <div><strong data-i18n="phone.item1.name">Scooter Single</strong><em data-i18n="phone.item1.price">$21,50 / dag</em></div>
-              </div>
-              <div class="app-item app-item-dim">
-                <img src="assets/img/fleet-double.jpg" alt="" width="96" height="104">
-                <div><strong data-i18n="phone.item2.name">Scooter Double</strong><em data-i18n="phone.item2.price">$27,50 / dag</em></div>
-              </div>
-              <div class="app-dates" data-i18n="phone.dates">24 aug → 31 aug</div>
-              <ol class="app-steps">
-                <li class="is-done" data-i18n="phone.step1">Datums</li>
-                <li class="is-done" data-i18n="phone.step2">Gegevens</li>
-                <li class="is-now" data-i18n="phone.step3">Rijbewijs + handtekening</li>
-                <li data-i18n="phone.step4">Bevestigd</li>
-              </ol>
-              <div class="app-cta" data-i18n="phone.cta">Reserveer</div>
             </div>
           </div>
           <div class="boeken-copy">
@@ -289,7 +340,7 @@
               <li data-reveal><span data-i18n="boeken.bl3">Rijbewijs uploaden en digitaal tekenen</span></li>
               <li data-reveal><span data-i18n="boeken.bl4">Direct je bevestiging in de mail</span></li>
             </ol>
-            <a class="btn btn-solid btn-lg" href="https://wa.me/5997011233" target="_blank" rel="noopener" data-reveal data-i18n="boeken.cta">Start je boeking</a>
+            <p class="boeken-support" data-reveal data-i18n="boeken.support">Jij kiest, wij bevestigen de beschikbaarheid via WhatsApp. Geen account, geen gedoe.</p>
           </div>
         </div>
       </div>
@@ -447,5 +498,7 @@
   <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/quiz.js"></script>
 </body>
 </html>

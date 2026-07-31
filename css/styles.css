@@ -29,7 +29,7 @@
 
 :root {
   --orange: #fe6601;
-  --orange-deep: #d15400;
+  --orange-deep: #c24e00;
   --amber: #ec9136;
   --cream: #faf7f4;
   --peach: #fcddc9;
@@ -1682,4 +1682,122 @@ body.menu-open .nav-toggle span:nth-child(3) {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+}
+
+/* ============================================================
+   v5 — pricing psychology, real cars, ontdek rows, booking quiz
+   ============================================================ */
+
+/* ---------- pricing: toggle + cards ---------- */
+.price-toggle { position: relative; display: inline-flex; background: var(--white); border: 1px solid var(--hairline); border-radius: 999px; padding: 5px; margin-bottom: 40px; }
+.pt-thumb { position: absolute; top: 5px; bottom: 5px; left: 5px; width: calc(50% - 5px); background: var(--ink); border-radius: 999px; transition: transform 0.3s cubic-bezier(0.4, 0.1, 0.2, 1); }
+.price-toggle[data-active="double"] .pt-thumb { transform: translateX(100%); }
+.pt-btn { position: relative; z-index: 1; border: 0; background: none; cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 0.95rem; padding: 11px clamp(24px, 4vw, 40px); border-radius: 999px; color: var(--muted); transition: color 0.3s; }
+.pt-btn.is-active { color: var(--white); }
+
+.price-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start; }
+.price-card { position: relative; background: var(--white); border: 1px solid var(--hairline); border-radius: 18px; padding: 28px 24px 26px; display: flex; flex-direction: column; gap: 6px; }
+.pc-dur { font-weight: 600; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.pc-total { font-family: var(--display); font-weight: 700; font-size: clamp(2.4rem, 4.5vw, 3.4rem); line-height: 1; letter-spacing: -0.02em; }
+.pc-eff { font-size: 0.85rem; color: var(--muted); }
+.pc-effnum { font-weight: 600; color: var(--ink); }
+.pc-save { margin-top: 6px; align-self: flex-start; font-family: var(--display); font-weight: 600; font-size: 0.8rem; color: #1e7a3c; background: #e8f7ec; border-radius: 999px; padding: 4px 12px; }
+.pc-save[data-empty] { visibility: hidden; }
+.price-card.is-best { border-color: var(--orange); border-width: 2px; background: #fff7f1; box-shadow: 0 24px 50px rgba(254, 102, 1, 0.14); transform: translateY(-10px); }
+.pc-ribbon { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--orange-deep); color: #fff; font-family: var(--display); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; white-space: nowrap; }
+.price-card.is-best .pc-total { color: var(--orange-deep); }
+.pc-save-strong { color: #fff; background: var(--orange-deep); }
+.pc-cta { margin-top: 16px; width: 100%; }
+
+/* ---------- cars: real fleet cards ---------- */
+.cars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.car-card { background: #232a34; border: 1px solid var(--hairline-light); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1), border-color 0.3s; }
+.car-card:hover { transform: translateY(-6px); border-color: rgba(254, 102, 1, 0.55); }
+.car-card-feature { border-color: rgba(254, 102, 1, 0.4); }
+.car-photo { aspect-ratio: 16 / 10; overflow: hidden; background: #2b333f; }
+.car-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.car-card:hover .car-photo img { transform: scale(1.05); }
+.car-photo-contain { background: linear-gradient(180deg, #f4f6f8, #d9dee4); }
+.car-photo-contain img { object-fit: contain; padding: 12px 8px; }
+.car-card:hover .car-photo-contain img { transform: scale(1.04); }
+.car-body { padding: 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.car-class { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.car-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.car-row h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; letter-spacing: -0.01em; }
+.car-price { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: #fff; white-space: nowrap; }
+.car-price span { font-family: var(--body); font-weight: 400; font-size: 0.78rem; color: rgba(255, 255, 255, 0.6); }
+.car-spec { font-size: 0.88rem; color: rgba(255, 255, 255, 0.65); }
+.car-allrisk { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; font-weight: 600; color: rgba(255, 255, 255, 0.85); }
+.car-check { width: 16px; height: 16px; border-radius: 50%; background: #2fae5d; position: relative; flex: none; }
+.car-check::after { content: "✓"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.62rem; font-weight: 700; }
+.car-cta { margin-top: auto; width: 100%; }
+.btn-outline-light { border-color: rgba(255, 255, 255, 0.35); color: #fff; }
+.btn-outline-light:hover { border-color: #fff; background: rgba(255, 255, 255, 0.08); }
+
+/* ---------- ontdek: editorial route rows ---------- */
+.routes-head { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; align-items: end; }
+.routes-lead { color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.2rem); max-width: 36ch; }
+.route-rows { display: flex; flex-direction: column; gap: clamp(40px, 6vw, 84px); }
+.route-row { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(28px, 4vw, 64px); align-items: center; }
+.route-row-rev .route-img { order: 2; }
+.route-img { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3 / 2; }
+.route-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2, 0.6, 0.2, 1); }
+.route-row:hover .route-img img { transform: scale(1.04); }
+.route-dist { position: absolute; top: 16px; left: 16px; background: rgba(26, 32, 44, 0.82); color: #fff; font-weight: 600; font-size: 0.78rem; padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(4px); }
+.route-tag { font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange-deep); }
+.route-info h3 { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.1; letter-spacing: -0.01em; margin: 12px 0 18px; max-width: 18ch; }
+.route-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.route-chips li { border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 15px; font-size: 0.82rem; font-weight: 600; }
+
+/* ---------- booking quiz (in phone) ---------- */
+.phone-screen { min-height: 456px; }
+.boeken-support { color: var(--muted); font-weight: 600; font-size: 1rem; max-width: 44ch; margin-top: 24px; }
+.quiz { display: flex; flex-direction: column; gap: 12px; }
+.quiz.quiz-in { animation: quizin 0.28s ease; }
+@keyframes quizin { from { opacity: 0.35; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.quiz-head { display: flex; align-items: baseline; justify-content: space-between; }
+.quiz-brand { font-family: var(--display); font-weight: 700; color: var(--orange-deep); font-size: 1rem; }
+.quiz-step { font-size: 0.72rem; font-weight: 600; color: var(--muted); }
+.quiz-dots { display: flex; gap: 5px; }
+.quiz-dots span { height: 4px; flex: 1; border-radius: 2px; background: var(--hairline); }
+.quiz-dots span.on { background: var(--orange-deep); }
+.quiz-q { font-family: var(--display); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; margin-top: 2px; }
+.quiz-opts { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt { display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: var(--cream); border: 1.5px solid var(--hairline); border-radius: 12px; padding: 12px 14px; cursor: pointer; font-family: var(--body); font-weight: 600; font-size: 0.9rem; color: var(--ink); transition: border-color 0.2s, background 0.2s; }
+.quiz-opt > span:first-child { flex: 1; }
+.quiz-opt em { font-style: normal; font-size: 0.76rem; color: var(--orange-deep); font-weight: 600; }
+.quiz-opt:hover { border-color: var(--orange); }
+.quiz-opt.is-sel { border-color: var(--orange-deep); background: #fff7f1; }
+.quiz-tick { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid var(--hairline); flex: none; }
+.quiz-opt.is-sel .quiz-tick { background: var(--orange-deep); border-color: var(--orange-deep); }
+.quiz-chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.quiz-chip { border: 1.5px solid var(--hairline); border-radius: 12px; padding: 14px 0; background: var(--cream); cursor: pointer; font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--ink); transition: border-color 0.2s, background 0.2s; }
+.quiz-chip:hover { border-color: var(--orange); }
+.quiz-chip.is-sel { border-color: var(--orange-deep); background: #fff7f1; color: var(--orange-deep); }
+.quiz-done { font-size: 1.3rem; }
+.quiz-summary { display: flex; flex-direction: column; gap: 7px; background: var(--cream); border-radius: 12px; padding: 14px; }
+.quiz-summary > div { display: flex; justify-content: space-between; gap: 10px; font-size: 0.82rem; }
+.quiz-summary span { color: var(--muted); }
+.quiz-summary b { text-align: right; font-weight: 600; }
+.quiz-price { border-top: 1px solid var(--hairline); margin-top: 3px; padding-top: 8px; }
+.quiz-price b { color: var(--orange-deep); font-family: var(--display); font-size: 1rem; }
+.quiz-datewrap { display: flex; flex-direction: column; gap: 5px; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
+.quiz-date { border: 1.5px solid var(--hairline); border-radius: 10px; padding: 9px 11px; font: inherit; font-size: 0.85rem; color: var(--ink); }
+.quiz-wa { display: flex; align-items: center; justify-content: center; gap: 9px; background: #128c7e; color: #fff; border-radius: 12px; padding: 13px; font-family: var(--display); font-weight: 600; font-size: 0.92rem; text-decoration: none; }
+.quiz-wa:hover { background: #0d7268; }
+.quiz-foot { display: flex; justify-content: space-between; margin-top: 2px; }
+.quiz-back, .quiz-restart { background: none; border: 0; cursor: pointer; font: inherit; font-size: 0.8rem; font-weight: 600; color: var(--muted); padding: 4px; }
+.quiz-back:hover, .quiz-restart:hover { color: var(--ink); }
+
+/* ---------- v5 responsive ---------- */
+@media (max-width: 860px) {
+  .price-cards, .cars-grid { grid-template-columns: 1fr; }
+  .price-card.is-best { transform: none; }
+  .routes-head { grid-template-columns: 1fr; gap: 16px; }
+  .route-row, .route-row-rev { grid-template-columns: 1fr; gap: 20px; }
+  .route-row-rev .route-img { order: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz.quiz-in { animation: none; }
 }

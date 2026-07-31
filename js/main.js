@@ -125,7 +125,7 @@
   });
 
   /* --- photos breathe on reveal --- */
-  gsap.utils.toArray(".fleet-photo img, .route-card figure img, .autos-photo img, .team-photo img").forEach(function (img) {
+  gsap.utils.toArray(".fleet-photo img, .route-img img, .car-photo img, .team-photo img").forEach(function (img) {
     gsap.from(img, {
       scale: 1.06,
       duration: 1.4,
@@ -133,17 +133,4 @@
       scrollTrigger: { trigger: img, start: "top 90%", once: true }
     });
   });
-
-  /* --- phone mock: step progression loop --- */
-  var steps = document.querySelectorAll(".app-steps li");
-  if (steps.length === 4) {
-    var stage = 2;
-    setInterval(function () {
-      stage = (stage + 1) % 5;
-      steps.forEach(function (li, i) {
-        li.classList.toggle("is-done", i < stage);
-        li.classList.toggle("is-now", i === stage);
-      });
-    }, 1800);
-  }
 })();
